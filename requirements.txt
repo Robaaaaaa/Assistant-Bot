@@ -6,4 +6,4 @@ SpeechRecognition
 scikit-learn
 python-dotenv
 langchain-openai
-faiss
+faiss-gpu
