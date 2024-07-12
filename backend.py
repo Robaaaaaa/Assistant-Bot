@@ -2,11 +2,12 @@ import os
 import glob
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
-from langchain_community.embeddings import OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
+from sklearn.metrics.pairwise import cosine_similarity
 
 VECTOR_STORE_PATH = "embeddings.npy"
 pdf_path = "documents"
@@ -61,6 +62,7 @@ def get_conversation_chain(vectorstore):
         memory=memory
     )
     return conversation_chain
+
 
 def get_individual_pdf_path(pdf_path):
     pdf_files = get_pdf_files(pdf_path)
