@@ -45,16 +45,18 @@ def recognize_speech():
     return text
 
 def main():
-    load_dotenv()
-    st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
-    st.write(css, unsafe_allow_html=True)
 
+    load_dotenv()
+    st.set_page_config(page_title="Question Answering😎", page_icon=":books:")
+    st.write(css, unsafe_allow_html=True)
+    with st.sidebar:
+        st.markdown("To add your own knowledge base to the Chatbot please contact the site administrators😉")
     if "conversation" not in st.session_state:
         st.session_state.conversation = None
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = None
 
-    st.header("Question Answering :books:")
+    st.header("Question Answering🤓 :books:")
 
     button_style ='''
         <style>
@@ -68,7 +70,7 @@ def main():
         <style>
     '''
 
-    user_question = st.text_input("Ask a question:")
+    user_question = st.text_input("How may I be of help to you😃:")
     st.markdown(button_style, unsafe_allow_html=True)
     if st.button("🎙"):
         speech_text = recognize_speech()

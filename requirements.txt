@@ -1,8 +1,9 @@
 streamlit
-dotenv
 PyPDF2
 langchain
 langchain_community
 glob
-OpenAI
 speechrecognition
+scikit-learn
+python-dotenv
+langchain-openai
