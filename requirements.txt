@@ -2,7 +2,6 @@ streamlit
 PyPDF2
 langchain
 langchain_community
-glob
 speechrecognition
 scikit-learn
 python-dotenv
