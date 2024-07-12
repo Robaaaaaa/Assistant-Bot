@@ -31,9 +31,7 @@ def handle_userinput(user_question):
                 st.write(bot_template.replace("{{MSG}}", message.content), unsafe_allow_html=True)
 
 def recognize_speech():
-    duration = 5
-    fs = 44100
-    recognizer = sd.rec(int(duration * fs), samplerate=fs, channels=2)
+    recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         st.write("Speak now...")
         audio = recognizer.listen(source)
