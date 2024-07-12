@@ -7,3 +7,5 @@ scikit-learn
 python-dotenv
 langchain-openai
 faiss-cpu
+pysqlite3
+pyaudio
