@@ -7,4 +7,4 @@ scikit-learn
 python-dotenv
 langchain-openai
 faiss-cpu
-pyaudio
+pyaudio==0.2.11
